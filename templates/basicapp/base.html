@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  </head>
+  <body>
+    <nav>
+      <div class="nav-wrapper">
+        <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a>Django</a></li>
+        <li><a href="{% url 'admin:index' %}">Admin</a></li>
+        <li><a href="{% url 'basicapp:register' %}">Register</a></li>
+
+        {% if user.is_authenticated %}
+        <li><a href="{% url 'basicapp:logout' %}">Log Out</a></li>
+        {% else %}
+        <li><a href="{% url 'basicapp:user_login' %}">Log In</a></li>
+        {% endif %}
+      </ul>
+      </div>
+
+    </nav>
+
+    <div class="container">
+      {% block body_block %}
+
+      {% endblock %}
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  </body>
+</html>
