@@ -28,7 +28,7 @@ SECRET_KEY = '@%hie2=y4yge_8$2y7zc^dhzizry&#_-k^c%h7li==uvii@pt='
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['albannablade123.pythonanywhere.com']
 
 
 # Application definition
